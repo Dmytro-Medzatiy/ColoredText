@@ -9,7 +9,7 @@ class ColoredText extends Component {
 
     constructor(props){
         super(props);
-        this.state = { textColor: 'rgb(117,117,117' };
+        this.state = { textColor: 'rgb(127,127,127' };
         this.onColorChange = this.onColorChange.bind(this);
     }
 
@@ -40,8 +40,8 @@ class ColoredText extends Component {
                          style={{ paddingTop: '1em' }}
                          params={this.props.params}
                          onChange={this.onColorChange}>
-                    <ColorPanel min={5}
-                                max={240}
+                    <ColorPanel min={0}
+                                max={255}
                                 step={1}
                                 ref="colorPanel" />
                     </Col>
