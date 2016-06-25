@@ -8,10 +8,11 @@ class ColorPanel extends Component {
 
     constructor(props){
         super(props);
-        this.state = {red: 127,
-                      green: 127,
-                      blue: 127,
-                      color: 'rgb(127,127,127)'};
+        const defVal = props.defaultValue;
+        this.state = {red: props.defaultValue,
+                      green: props.defaultValue,
+                      blue: props.defaultValue,
+                      color: 'rgb('+defVal+','+defVal+','+defVal+')'};
         this.onPanelChange = this.onPanelChange.bind(this);
     }
 
@@ -34,7 +35,6 @@ class ColorPanel extends Component {
                 <BSlider {...this.props}
                          ref="green"
                 />
-
                 <BSlider {...this.props}
                          ref="blue"
                 />
@@ -42,5 +42,8 @@ class ColorPanel extends Component {
             );
     }
 }
+
+ColorPanel.propTypes = { defaultValue: React.PropTypes.number };
+ColorPanel.defaultValue = { defaultValue: 0 };
 
 export default ColorPanel;

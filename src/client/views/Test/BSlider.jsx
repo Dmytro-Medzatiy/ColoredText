@@ -7,7 +7,7 @@ class BSlider extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { value: Math.trunc((props.max - props.min)/2)};
+        this.state = { value: props.defaultValue};
         this.onSliderChange = this.onSliderChange.bind(this);
     }
 
@@ -30,6 +30,7 @@ class BSlider extends Component {
                                min={this.props.min}
                                max={this.props.max}
                                step={this.props.step}
+                               value={this.state.value}
                                ref="slider"
                                onChange = {this.onSliderChange}
                         />
@@ -55,10 +56,12 @@ class BSlider extends Component {
 
 BSlider.propTypes = { min: React.PropTypes.number,
                       max: React.PropTypes.number,
-                      step: React.PropTypes.number};
+                      step: React.PropTypes.number,
+                      defaultValue: React.PropTypes.number};
 
 BSlider.defaultProps = { min: 0,
                          max: 100,
-                         step: 1 };
+                         step: 1,
+                         defaultValue: 0};
 
 export default BSlider;
