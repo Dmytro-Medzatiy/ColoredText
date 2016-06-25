@@ -1,0 +1,9 @@
+[
+  {
+    "type": "Label",
+    "props": {
+      "bsStyle": "primary"
+    },
+    "text": "Label"
+  }
+]

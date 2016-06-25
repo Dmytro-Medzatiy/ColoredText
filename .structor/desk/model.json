@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "pageName": "HomePage",
+      "pagePath": "/home",
+      "children": [
+        {
+          "type": "div",
+          "props": {
+            "style": {
+              "textAlign": "center"
+            }
+          },
+          "children": [
+            {
+              "type": "span",
+              "text": "Colored Text",
+              "props": {}
+            }
+          ]
+        },
+        {
+          "type": "ColoredText"
+        }
+      ]
+    }
+  ]
+}
