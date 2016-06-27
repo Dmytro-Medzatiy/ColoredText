@@ -45,23 +45,21 @@ class ColoredText extends Component {
                          sm={4}
                          lg={4}
                          params={this.props.params}
-                         onChange={this.onColorChange}>
+                         /*onChange={this.onColorChange}*/>
                         <label>Text Color</label>
                     <ColorPanel min={0}
                                 max={255}
                                 step={1}
                                 defaultValue={0}
-                                ref="colorPanel" />
+                                ref="colorPanel" 
+                                onTextChanged={this.onColorChange} />
                         <label>Background Color</label>
-
-
-
-
                     <ColorPanel min={0}
                                 max={255}
                                 step={1}
                                 defaultValue={255}
-                                ref="colorPanelBack" />
+                                ref="colorPanelBack"
+                                onTextChanged={this.onColorChange} />
                     </Col>
                 </Row>
             </Grid>

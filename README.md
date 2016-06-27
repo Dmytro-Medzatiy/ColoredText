@@ -1,7 +1,12 @@
 [![structor compatible](https://img.shields.io/badge/structor%20compatible-v1.0.10-0077dd.svg?style=flat)](https://helmetrex.com)
 
 ### Description
-Structor starter project with React Bootstrap components.
+
+Colored Text Reactjs component created in #Structor (https://github.com/ipselon/structor)
+
+Based on Structor starter project with React Bootstrap components.
+
+Demo: https://powerful-temple-43401.herokuapp.com/
  
 ### Documentation
 

@@ -22,11 +22,13 @@ class ColorPanel extends Component {
                        blue: this.refs.blue.state.value});
         const color = 'rgb('+this.state.red+','+this.state.green+','+this.state.blue+')';
         this.setState({color: color});
+        this.props.onTextChanged();
 
     }
 
     render() {
         return (
+            
             <Panel style={{ backgroundColor: this.state.color }}
                    onChange={this.onPanelChange} >
                 <BSlider {...this.props}
